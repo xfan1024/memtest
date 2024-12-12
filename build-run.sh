@@ -24,7 +24,7 @@ for T in 0 1; do
     fi
     exe=./build/memtest-m$M-i$I-t$T
     macro="-DMAGIC_NOT_ZERO=$M -DWARMUP_INITMAGIC=$I -DWARMUP_TESTFUNC=$T"
-    gcc -O3 -fno-tree-loop-distribute-patterns -DMAGIC_NOT_ZERO=$M -DWARMUP_INITMAGIC=$I -DWARMUP_TESTFUNC=$T memtest.c -o $exe
+    gcc -O3 -fno-tree-loop-distribute-patterns $macro memtest.c -o $exe
     $exe
     echo
 done
