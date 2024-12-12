@@ -1,0 +1,56 @@
+Kernel: 5.10.198-android12-9-00085-g226a9632f13d-ab11136126
+CPU:    aarch64 | unknown 5 core
+RAM:    7.0 GB
+
+Build with: TEST_GB=1 MAGIC_NOT_ZERO=0 WARMUP_INITMAGIC=0 WARMUP_TESTFUNC=1
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                30924.83            30879.27            30817.75
+STORE               28115.90            27115.41            25205.38
+MEMSET              32329.29            31664.75            29733.00
+MEMCPY              30944.35            30814.74            29353.42
+
+Build with: TEST_GB=1 MAGIC_NOT_ZERO=0 WARMUP_INITMAGIC=1 WARMUP_TESTFUNC=0
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                24775.07            24521.16            22309.32
+STORE               29801.69            29266.98            27807.08
+LOAD                15040.43            10601.07            9677.12
+MEMSET              31911.75            31167.95            30111.00
+MEMCPY              25258.68            24223.80            18974.36
+
+Build with: TEST_GB=1 MAGIC_NOT_ZERO=0 WARMUP_INITMAGIC=1 WARMUP_TESTFUNC=1
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                24604.60            24189.92            22966.51
+STORE               28141.77            27419.31            26038.69
+LOAD                15448.42            10818.49            8971.42
+MEMSET              38346.38            37417.35            34852.35
+MEMCPY              25005.69            24818.42            24597.98
+
+Build with: TEST_GB=1 MAGIC_NOT_ZERO=1 WARMUP_INITMAGIC=0 WARMUP_TESTFUNC=1
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                30939.28            30853.77            30454.90
+STORE               29123.75            27728.00            20574.11
+MEMSET              38181.72            35565.30            24781.94
+MEMCPY              30860.17            30713.55            30139.25
+
+Build with: TEST_GB=1 MAGIC_NOT_ZERO=1 WARMUP_INITMAGIC=1 WARMUP_TESTFUNC=0
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                24592.05            24373.30            23763.70
+STORE               28643.69            27224.11            18817.87
+LOAD                8312.89             8166.90             7585.40
+MEMSET              38480.49            37359.18            34681.92
+MEMCPY              25036.61            24843.44            24553.93
+
+Build with: TEST_GB=1 MAGIC_NOT_ZERO=1 WARMUP_INITMAGIC=1 WARMUP_TESTFUNC=1
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                24855.50            23814.30            18806.86
+STORE               27581.95            27226.48            25342.06
+LOAD                8346.14             8279.90             7582.75
+MEMSET              31795.22            30606.41            22595.61
+MEMCPY              25518.43            25112.00            23408.33
+

@@ -1,0 +1,56 @@
+Kernel: 5.15.0-125-generic
+CPU:    x86_64 | AMD Ryzen 9 7950X 16-Core Processor
+RAM:    31.3 GB
+
+Build with: TEST_GB=8 MAGIC_NOT_ZERO=0 WARMUP_INITMAGIC=0 WARMUP_TESTFUNC=1
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                22771.82            22600.42            22435.39
+STORE               26909.40            26735.08            26359.47
+MEMSET              53972.74            51331.12            49374.72
+MEMCPY              116075.95           114975.99           113408.80
+
+Build with: TEST_GB=8 MAGIC_NOT_ZERO=0 WARMUP_INITMAGIC=1 WARMUP_TESTFUNC=0
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                20957.98            20795.08            20162.29
+STORE               26835.49            26654.67            26253.78
+LOAD                31393.23            31246.28            30765.58
+MEMSET              53105.04            50759.33            49172.60
+MEMCPY              44020.55            43546.99            42959.44
+
+Build with: TEST_GB=8 MAGIC_NOT_ZERO=0 WARMUP_INITMAGIC=1 WARMUP_TESTFUNC=1
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                20996.74            20828.37            20652.90
+STORE               26922.83            26708.20            26300.14
+LOAD                31388.58            31098.52            28856.24
+MEMSET              53450.53            51061.11            48881.13
+MEMCPY              43959.36            43311.87            41377.26
+
+Build with: TEST_GB=8 MAGIC_NOT_ZERO=1 WARMUP_INITMAGIC=0 WARMUP_TESTFUNC=1
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                22511.04            22322.43            21594.39
+STORE               24943.65            24854.71            24648.71
+MEMSET              53163.79            51140.66            49616.77
+MEMCPY              116433.27           114874.88           113397.04
+
+Build with: TEST_GB=8 MAGIC_NOT_ZERO=1 WARMUP_INITMAGIC=1 WARMUP_TESTFUNC=0
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                26008.69            25688.90            24793.05
+STORE               24970.44            24841.01            24557.99
+LOAD                16273.64            16234.00            16103.22
+MEMSET              52984.76            50830.00            49356.27
+MEMCPY              45625.59            45128.66            44552.32
+
+Build with: TEST_GB=8 MAGIC_NOT_ZERO=1 WARMUP_INITMAGIC=1 WARMUP_TESTFUNC=1
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                21245.99            21128.73            20938.67
+STORE               24976.41            24844.00            24519.21
+LOAD                16250.68            16195.15            15850.74
+MEMSET              53638.09            51354.91            49556.11
+MEMCPY              45012.18            44641.81            43549.98
+

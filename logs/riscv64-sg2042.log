@@ -1,0 +1,56 @@
+Kernel: 6.6.0-27.0.0.31.oe2403.riscv64
+CPU:    riscv64 | unknown 64 core
+RAM:    120.9 GB
+
+Build with: TEST_GB=8 MAGIC_NOT_ZERO=0 WARMUP_INITMAGIC=0 WARMUP_TESTFUNC=1
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                5806.33             4943.96             3503.74
+STORE               2940.07             2881.18             2853.50
+MEMSET              2929.36             2869.83             2855.30
+MEMCPY              5772.06             5766.93             5760.18
+
+Build with: TEST_GB=8 MAGIC_NOT_ZERO=0 WARMUP_INITMAGIC=1 WARMUP_TESTFUNC=0
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                5895.85             4391.98             1916.66
+STORE               2909.33             2861.73             2851.32
+LOAD                4983.80             4982.82             4978.29
+MEMSET              2911.21             2862.15             2850.44
+MEMCPY              6363.01             6267.19             5593.31
+
+Build with: TEST_GB=8 MAGIC_NOT_ZERO=0 WARMUP_INITMAGIC=1 WARMUP_TESTFUNC=1
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                5832.81             5172.21             4032.12
+STORE               2898.38             2878.32             2849.38
+LOAD                4983.04             4975.74             4960.06
+MEMSET              2940.75             2886.45             2863.65
+MEMCPY              6573.74             6486.94             6279.73
+
+Build with: TEST_GB=8 MAGIC_NOT_ZERO=1 WARMUP_INITMAGIC=0 WARMUP_TESTFUNC=1
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                5994.32             4730.82             4036.76
+STORE               2950.80             2895.01             2885.54
+MEMSET              2945.96             2877.07             2862.35
+MEMCPY              5773.86             5741.62             5704.89
+
+Build with: TEST_GB=8 MAGIC_NOT_ZERO=1 WARMUP_INITMAGIC=1 WARMUP_TESTFUNC=0
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                6362.46             5573.45             5013.21
+STORE               2923.94             2867.45             2856.62
+LOAD                4936.58             4749.64             4100.61
+MEMSET              2905.00             2859.60             2821.89
+MEMCPY              6301.78             5936.77             4635.93
+
+Build with: TEST_GB=8 MAGIC_NOT_ZERO=1 WARMUP_INITMAGIC=1 WARMUP_TESTFUNC=1
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                6238.81             5618.27             5168.38
+STORE               2908.84             2858.72             2822.12
+LOAD                4918.79             4775.17             4442.56
+MEMSET              2919.08             2871.49             2859.67
+MEMCPY              6338.88             6308.51             6281.46
+

@@ -1,0 +1,56 @@
+Kernel: 5.15.167.4-microsoft-standard-WSL2
+CPU:    x86_64 | Intel(R) Core(TM) Ultra 9 185H
+RAM:    15.4 GB
+
+Build with: TEST_GB=8 MAGIC_NOT_ZERO=0 WARMUP_INITMAGIC=0 WARMUP_TESTFUNC=1
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                25596.41            25286.45            24939.52            
+STORE               13240.11            13117.35            12979.58            
+MEMSET              13763.17            13555.79            13456.09            
+MEMCPY              78477.00            73291.29            56985.47            
+
+Build with: TEST_GB=8 MAGIC_NOT_ZERO=0 WARMUP_INITMAGIC=1 WARMUP_TESTFUNC=0
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                22318.88            21994.44            21651.11            
+STORE               13225.20            13075.80            12971.62            
+LOAD                25702.68            24831.11            23825.85            
+MEMSET              13606.05            13477.82            13326.44            
+MEMCPY              37424.57            36603.54            35976.42            
+
+Build with: TEST_GB=8 MAGIC_NOT_ZERO=0 WARMUP_INITMAGIC=1 WARMUP_TESTFUNC=1
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                22389.01            22158.56            21805.36            
+STORE               13250.03            13084.33            12888.40            
+LOAD                25556.63            24985.21            24479.67            
+MEMSET              13639.41            13530.81            13414.38            
+MEMCPY              37619.83            36802.86            35700.99            
+
+Build with: TEST_GB=8 MAGIC_NOT_ZERO=1 WARMUP_INITMAGIC=0 WARMUP_TESTFUNC=1
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                25597.75            25118.53            23998.93            
+STORE               13243.53            13147.87            13065.93            
+MEMSET              13763.41            13523.41            13327.33            
+MEMCPY              74767.16            71467.81            56736.27            
+
+Build with: TEST_GB=8 MAGIC_NOT_ZERO=1 WARMUP_INITMAGIC=1 WARMUP_TESTFUNC=0
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                22618.36            22320.56            22084.31            
+STORE               13252.12            13133.96            13050.82            
+LOAD                25717.76            25221.27            24521.32            
+MEMSET              13632.31            13525.43            13396.96            
+MEMCPY              37431.13            36791.39            36199.61            
+
+Build with: TEST_GB=8 MAGIC_NOT_ZERO=1 WARMUP_INITMAGIC=1 WARMUP_TESTFUNC=1
+TEST                Best Rate           Avg Rate            Worst Rate
+----------------------------------------------------------------------
+COPY                22375.07            22085.95            21514.74            
+STORE               13236.51            13126.72            12984.91            
+LOAD                26186.98            25413.13            24808.01            
+MEMSET              13621.32            13479.40            13304.18            
+MEMCPY              37370.89            36682.88            35902.08            
+
